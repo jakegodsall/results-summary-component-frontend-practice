@@ -7,12 +7,50 @@
 
 body {
     margin: 0;
+    font-weight: 700;
+}
+
+p {
+    margin: 0;
 }
 
 .results-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    color: hsla(241, 100%, 89%, 0.7);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 2rem;
+}
+
+.results__circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 125px;
+    height: 125px;
+    margin: 1rem;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.results-section__score {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.results-section__score-label {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.results-section__score-description {
+    font-size: 0.9rem;
 }
 
 .summary-section {
