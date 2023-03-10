@@ -5,6 +5,12 @@
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-weight: 700;
@@ -18,12 +24,17 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     text-align: center;
     color: hsla(241, 100%, 89%, 0.7);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     padding: 2rem;
+}
+
+.results__title {
+    font-size: 1.2rem;
 }
 
 .results__circle {
@@ -124,4 +135,85 @@ h1 {
     font-weight: 500;
     letter-spacing: 0.05rem;
     font-size: 1.1rem;
+
+    transition: all 200ms;
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.attribution {
+    margin-top: 5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.attribution a {
+    color: #f55;
+    font-weight: 700;
+}
+
+/* small viewport */
+@media screen and (min-width: 400px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-container {
+        max-width: 400px;
+    }
+}
+
+/* tablet viewport */
+@media screen and (min-width: 640px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        width: 75%;
+        max-width: none;
+        box-shadow: 5px 5px 50px 5px hsla(233, 67%, 87%, 0.852);
+        border-radius: 25px;
+    }
+
+    .results-section {
+        border-radius: 25px;
+        padding: 2rem;
+    }
+
+    .results__circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .results-section__score-label {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        padding: 0.75rem 0;
+        margin-top: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+/* desktop viewport */
+@media screen and (min-width: 1024px) {
+    .main-container {
+        max-width: 750px;
+    }
 }
