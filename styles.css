@@ -57,6 +57,11 @@ p {
     padding: 1rem;
 }
 
+h1 {
+    font-size: 1.2rem;
+    color: hsl(224, 30%, 27%);
+}
+
 .score-card-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -76,24 +81,36 @@ p {
     align-items: center;
 }
 
-.score-card__title img {
+.score-card__title svg {
     margin-right: 0.5rem;
+}
+
+.score-card__score {
+    color: hsla(0, 0%, 32%, 0.7);
+}
+
+.score-card__score span {
+    color: hsl(224, 30%, 27%);
 }
 
 .reaction {
     background-color: hsla(0, 100%, 67%, 0.2);
+    color: #f55;
 }
 
 .memory {
     background-color: hsla(39, 100%, 56%, 0.2);
+    color: #ffb21e;
 }
 
 .verbal {
     background-color: hsla(166, 100%, 37%, 0.2);
+    color: #00bb8f;
 }
 
 .visual {
     background-color: hsla(234, 85%, 45%, 0.2);
+    color: #1125d6;
 }
 
 .btn {
